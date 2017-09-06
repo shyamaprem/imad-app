@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
+var articles = {
+    'article-one' : {
     title: 'Article-One',
     heading:'Article-One',
     date:'Sep 6 2017',
@@ -20,6 +21,39 @@ var articleOne = {
                     This is the problem - I am using the Express module and my app is listening some port (8080). When I start the app from the command line, it throws this error:
                     
                 </p>`
+    },
+    'article-two' : {
+    title: 'Article-Two',
+    heading:'Article-Two',
+    date:'Sep 10 2017',
+    content:`   <p>
+                    This is my first time working with Node.js and I ran into this problem:
+                </p>
+                <p>
+                    I have started a Node server through the plugin of an IDE. Unfortunately, I cannot use the IDE's terminal. So I tried to run the script from the command line.
+                    
+                </p>
+                <p>
+                    This is the problem - I am using the Express module and my app is listening some port (8080). When I start the app from the command line, it throws this error:
+                    
+                </p>`
+    },
+    'article-three'  : {
+    title: 'Article-Three',
+    heading:'Article-Three',
+    date:'Sep 16 2017',
+    content:`   <p>
+                    This is my first time working with Node.js and I ran into this problem:
+                </p>
+                <p>
+                    I have started a Node server through the plugin of an IDE. Unfortunately, I cannot use the IDE's terminal. So I tried to run the script from the command line.
+                    
+                </p>
+                <p>
+                    This is the problem - I am using the Express module and my app is listening some port (8080). When I start the app from the command line, it throws this error:
+                    
+                </p>`
+    }
 };
 function createTemplate(data){
     
@@ -61,8 +95,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function (req, res) {
-  res.send(createTemplate(articleOne));
+app.get('/:articleName', function (req, res) {
+  res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/article-two', function (req, res) {
