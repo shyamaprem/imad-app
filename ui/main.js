@@ -9,6 +9,6 @@ function moveMadi(){
  img.style.marginLeft = 10 + "px"  ;
 }
 img.onclick = function(){
-    var interval = setinterval(moveMadi,100);
+    var interval = setInterval(moveMadi,100);
     
 };
