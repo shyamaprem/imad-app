@@ -5,8 +5,8 @@ element.innerHTML = 'New value';
 var img = document.getElementById('main-img');
 var int = 10;
 function moveMadi(){
- var margin  = int + 5;  
- img.style.marginLeft = 10 + "px"  ;
+ int += 5;  
+ img.style.marginLeft = int + "px"  ;
 }
 img.onclick = function(){
     var interval = setInterval(moveMadi,100);
