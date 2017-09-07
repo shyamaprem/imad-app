@@ -4,5 +4,6 @@ console.log(element);
 element.innerHTML = 'New value';
 var img = document.getElementById('main-img');
 img.onclick = function(){
-  img.style.marginLeft = "100px"  ;
+  for(var i=1;i<10;i++)
+    img.style.marginLeft = "10px"  ;
 };
