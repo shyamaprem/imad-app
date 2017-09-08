@@ -14,6 +14,8 @@ img.onclick = function(){
 };
 var counter = 0;
 var btn = document.getElementById('click_btn');
+console.log("before func call");
+console.log(btn);
 btn.onclick = function() {
     
     counter = counter + 1;
