@@ -13,7 +13,7 @@ img.onclick = function(){
     
 };
 var counter = 0;
-var btn = document.getElementById('click_btn');
+var btn = document.getElementById('clickbtn');
 console.log("before func call");
 console.log(btn);
 btn.onclick = function() {
