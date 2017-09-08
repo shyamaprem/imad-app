@@ -121,7 +121,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/counter',function(req,res){
-  res.send("Iam here");
+  res.send('Iam here');
 });
 
 // Do not change port, otherwise your app won't run on IMAD servers
