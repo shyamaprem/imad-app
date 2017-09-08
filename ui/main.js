@@ -12,3 +12,10 @@ img.onclick = function(){
     var interval = setInterval(moveMadi,100);
     
 };
+var counter = 0;
+var btn = document.getElementById('clk_btn');
+btn.onclick = function(){
+    counter = counter + 1;
+    var ctr = document.getElementById('counter_span');
+    console.log(ctr);
+}
