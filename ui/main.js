@@ -13,9 +13,11 @@ img.onclick = function(){
     
 };
 var counter = 0;
-var btn = document.getElementById('clk_btn');
-btn.onclick = function(){
+var btn = document.getElementById('click_btn');
+btn.onclick = function() {
+    
     counter = counter + 1;
-    var ctr = document.getElementById('counter_span');
-    console.log(ctr);
+    var span = document.getElementById('counter_span');
+    span.innerHTML = counter;
+    console.log(span);
 }
